@@ -14,6 +14,7 @@ body{
 p{
     color: #555;
     font-size: 1rem;
+    line-height: 1.6rem;
 }
 .primary-color{
     color: #FF900E;
@@ -55,6 +56,7 @@ nav ul li{
     height: 100vh;
     display: flex;
     align-items: center;
+    border: 1px solid red;
 }
 .container{
     max-width: 1260px;
@@ -80,6 +82,9 @@ nav ul li{
 .col-1 img{
     max-width: 100%;
     padding: 50px 0;
+}
+.col-2 img{
+    max-width: 100%;
 }
 .banner-info{
     font-size: 4rem;
@@ -135,4 +140,65 @@ nav ul li{
 }
 .features-img-container img{
     width: 100%;
+}
+
+/* ======== features you love  ============= */
+.love-features{
+    position: relative;
+}
+.fancy-title{
+    /* text-align: center; */
+    padding-left: 1rem;
+    position: relative;
+    line-height: 65px;
+}
+.fancy-title::before{
+    position: absolute;
+    content: '';
+    background: #ff523b;
+    width: 5px;
+    height: 90%;
+    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+}
+.features-info{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 1.5rem;
+    border: 1px solid red;
+    margin-top: 2rem;
+    margin-right: 1.5rem;
+}
+.single-features{
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.feature-info h4{
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+.exp{
+    position: absolute;
+    left: 50%;
+    bottom: -3rem;
+    display: inline-block;
+    background: #FF900E;
+    padding: 2.2rem 2.5rem;
+    color: white;
+    border-radius: 4px;
+}
+.exp h2{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.exp p{
+    font-size: 1rem;
+    margin-top: .4rem;
+    color: white;
+    text-align: center;
 }
