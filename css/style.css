@@ -52,19 +52,20 @@ nav ul li{
     line-height: 1.4rem;
     font-weight: 500;
 }
-.contain{
+/* .contain{
     height: 100vh;
     display: flex;
     align-items: center;
     border: 1px solid red;
-}
+} */
+
 .container{
     max-width: 1260px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
     /* border: 1px solid rgb(255, 21, 0); */
-}
+} 
 .banner-row{
     display: flex;
     flex-direction: column;
@@ -106,9 +107,10 @@ nav ul li{
 
 /* ======== features product ============= */
 .features{
+    padding: 3rem 0;
     margin-top: 5rem;
     margin-bottom: 3rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* background: gray; */
 }
 .title{
@@ -128,7 +130,6 @@ nav ul li{
     flex-basis: 50%;
     min-width: 300px;
     padding-left: 2rem;
-    /* border: 1px solid limegreen; */
 }
 .features-img-container{
     /* border: 1px solid gold; */
@@ -167,7 +168,7 @@ nav ul li{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     row-gap: 1.5rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-top: 2rem;
     margin-right: 1.5rem;
 }
@@ -175,6 +176,10 @@ nav ul li{
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.3s;
+}
+.single-features:hover{
+    transform: scale(1.05);
 }
 .feature-info h4{
     font-size: 1.2rem;
@@ -201,4 +206,176 @@ nav ul li{
     margin-top: .4rem;
     color: white;
     text-align: center;
+}
+
+/* =========== some fact part ============ */
+.some-fact{
+    /* background: #fdf9ff; */
+    margin-top: 10rem;
+}
+.fact-title{
+    text-align: left;
+    padding-left: 2rem;
+}
+/* .container{
+    border: 1px solid lime;
+} */
+.col-4{
+    flex-basis: 25%;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.fact-logo-item{
+    border: 1px solid gold;
+    padding: 2.5rem 0;
+    margin: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.103);
+    border-radius: 3px;
+    transition: all ease 0.4s;
+}
+.fact-logo-item:hover{
+    background: #FF900E;
+    color: #fff;
+    transform: scale(1.1);
+}
+.fact-logo-item h4{
+    font-size: 2.6rem;
+    line-height: 3rem;
+    margin: 1rem 0 .5rem;
+}
+.fact-logo-item p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+}
+.fact-logo-item .icon img{
+    /* background: red; */
+    height: 2.6rem;
+    width: 2.6rem;
+    line-height: 4rem;
+   
+}
+
+
+/* ============== call to action ============= */
+.ctn{
+    padding-top: 8rem;
+    margin: 0 auto ;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)),url(../images/banner.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    text-align: center;
+    padding: 6rem 0;
+}
+.ctn h1{
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+/* =========== sponsor section ============ */
+.sponser-brand{
+    margin: 5rem 0;
+}
+.details-info{
+    text-align: center;
+}
+
+.brnad-logos{
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   padding: 3rem;
+    /* border: 1px solid blue; */
+}
+.brnad-logos img{
+    display: inline-block;
+    /* flex-basis: 15%; */
+    padding: .5rem 1rem;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+.brnad-logos img:hover{
+    filter: grayscale(0);
+}
+
+.footer {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #FFF4E7;
+    text-align: center;
+ }
+
+ /* ---------- media query for responsive mobile device -------- */
+@media only screen and (max-width: 640px){
+    .row{
+        text-align: center;
+    }
+   
+    .co1-1, .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+        margin: 0;
+    }
+    .col-1{
+        /* border: 2px solid red; */
+        padding-left: 0;
+    }
+    .banner-row{
+        margin-top: 3rem;
+    }
+    .features, .some-fact, .sponser-brand{
+        margin: 3rem 0 1rem;
+    }
+    .features-img-container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 0;
+    }
+    .features-info{
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 1.5rem;
+    /* border: 1px solid red; */
+    margin: 2rem 0 1.5rem;
+    }
+    .row .col-2, .fact-title{
+        padding: 0;
+    }
+    .fancy-title{
+        padding-left: .7rem;
+    }
+    .exp{
+        position: static;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 2rem auto 0;
+        padding: 1rem 2rem;
+    }
+    .exp h2{
+        font-size: 2rem;
+    }
+    .brnad-logos{
+       grid-template-columns: repeat(3, 1fr);
+       gap: .5rem;
+       padding: 1rem;
+    }
+    .brnad-logos img{
+        display: inline;
+       width: 100%;
+    }
+    .ctn{
+        padding-top: 5rem;
+        width: 100%;
+        border-radius: 15px;
+        text-align: center;
+    }
+    .ctn h1{
+        font-size: 3rem;
+    }
+    .footer{
+        padding: 1rem 3rem;
+    }
 }
